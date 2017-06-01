@@ -1,13 +1,20 @@
 #include "ObtenerString.cpp"
+#include "Encryp.cpp"
 ObtenerString obt;
+Encryp enc;
 void setup() {
-  Serial.begin(9600);
+  Serial.begin(57600);
 }
 
 void loop() {
   obt.readingSer();
-  if ((obt.getRead().length()) > 0) {
-    Serial.println(obt.getRead());
+  String strpalabras = obt.getRead();
+  if ((strpalabras.length()) > 0) {
+    Serial.println(strpalabras);
+    Serial.println(strpalabras.length());
     obt.setRead("");
+    enc.setData(strpalabras);
+    Serial.println(enc.EncString());
+    //Serial.println(enc.DesencString());
   }
 }
