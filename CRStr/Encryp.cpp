@@ -1,4 +1,4 @@
-/*#include <aes.h>
+#include <aes.h>
 #include <aes128_dec.h>
 #include <aes128_enc.h>
 #include <aes192_dec.h>
@@ -39,5 +39,5 @@ class Encryp{
     char DesencString(){
       aes128_enc_single(key, data);
     }
-}*/
+}
 
