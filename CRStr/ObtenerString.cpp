@@ -1,4 +1,4 @@
-#include "arduino.h"
+#include <arduino.h>
 class ObtenerString {
   private:
     String readString;
